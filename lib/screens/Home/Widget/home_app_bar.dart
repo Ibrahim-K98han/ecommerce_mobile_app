@@ -14,21 +14,21 @@ class CustomAppBar extends StatelessWidget {
         IconButton(
           style: IconButton.styleFrom(
             backgroundColor: kContentColor,
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
           ),
           onPressed: () {},
           icon: Image.asset(
             'images/icon.png',
-            height: 20,
+            height: 15,
           ),
         ),
         IconButton(
           style: IconButton.styleFrom(
             backgroundColor: kContentColor,
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
           ),
           onPressed: () {},
-          iconSize: 30,
+          iconSize: 20,
           icon: const Icon(
             Icons.notifications_outlined,
           ),
