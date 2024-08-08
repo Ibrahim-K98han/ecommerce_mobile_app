@@ -1,8 +1,10 @@
 import 'package:ecommerce_mobile_app/constants.dart';
 import 'package:ecommerce_mobile_app/models/product.dart';
-import 'package:ecommerce_mobile_app/screens/Detail/detail_app_bar.dart';
-import 'package:ecommerce_mobile_app/screens/Detail/detail_image_slider.dart';
-import 'package:ecommerce_mobile_app/screens/Detail/items_details.dart';
+import 'package:ecommerce_mobile_app/screens/Detail/widget/addto_cart.dart';
+import 'package:ecommerce_mobile_app/screens/Detail/widget/description.dart';
+import 'package:ecommerce_mobile_app/screens/Detail/widget/detail_app_bar.dart';
+import 'package:ecommerce_mobile_app/screens/Detail/widget/detail_image_slider.dart';
+import 'package:ecommerce_mobile_app/screens/Detail/widget/items_details.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatefulWidget {
@@ -23,6 +25,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kContentColor,
+      floatingActionButton: AddToCart(product: widget.product),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: Column(
           children: [
@@ -71,18 +75,18 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 left: 20,
                 right: 20,
                 top: 20,
-                bottom: 100,
+                bottom: 50,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ItemsDetails(product: widget.product),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   const Text(
                     'Color',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   Row(
                     children: List.generate(
                       widget.product.colors.length,
@@ -122,7 +126,13 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  Description(
+                    description: widget.product.description,
+                  ),
                 ],
               ),
             )

@@ -12,7 +12,7 @@ class DetailImageSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250,
+      height: 240,
       child: PageView.builder(
         onPageChanged: onChange,
         itemBuilder: (context, index) {
