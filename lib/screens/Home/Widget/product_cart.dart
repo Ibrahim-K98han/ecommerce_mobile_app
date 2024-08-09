@@ -35,14 +35,17 @@ class ProductCart extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
-                  height: 15,
+                  height: 5,
                 ),
                 Center(
-                  child: Image.asset(
-                    product.image,
-                    width: 100,
-                    height: 100,
-                    fit: BoxFit.cover,
+                  child: Hero(
+                    tag: product.image,
+                    child: Image.asset(
+                      product.image,
+                      width: 120,
+                      height: 120,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -84,6 +87,29 @@ class ProductCart extends StatelessWidget {
                   ],
                 )
               ],
+            ),
+          ),
+          Positioned(
+            child: Align(
+              alignment: Alignment.topRight,
+              child: Container(
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                  color: kPrimaryColor,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(10),
+                  ),
+                ),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Icon(
+                    Icons.favorite_border,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ),
           )
         ],
