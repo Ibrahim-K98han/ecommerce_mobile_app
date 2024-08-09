@@ -18,7 +18,7 @@ class Description extends StatelessWidget {
           children: [
             Container(
               width: 120,
-              height: 40,
+              height: 35,
               decoration: BoxDecoration(
                 color: kPrimaryColor,
                 borderRadius: BorderRadius.circular(
@@ -55,7 +55,7 @@ class Description extends StatelessWidget {
         ),
         Text(
           description,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 12,
             color: Colors.grey,
           ),

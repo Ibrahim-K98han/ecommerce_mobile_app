@@ -20,7 +20,7 @@ class _AddToCartState extends State<AddToCart> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
-        height: 65,
+        height: 60,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
           color: Colors.black,
@@ -71,7 +71,7 @@ class _AddToCartState extends State<AddToCart> {
             GestureDetector(
               onTap: () {},
               child: Container(
-                height: 50,
+                height: 45,
                 decoration: BoxDecoration(
                   color: kPrimaryColor,
                   borderRadius: BorderRadius.circular(50),

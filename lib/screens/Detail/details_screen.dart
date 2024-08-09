@@ -75,7 +75,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 left: 20,
                 right: 20,
                 top: 20,
-                bottom: 50,
+                bottom: 20,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,7 +128,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     ),
                   ),
                   const SizedBox(
-                    height: 25,
+                    height: 15,
                   ),
                   Description(
                     description: widget.product.description,
